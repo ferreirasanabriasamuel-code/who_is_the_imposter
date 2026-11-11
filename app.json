@@ -2,7 +2,7 @@
   "expo": {
     "name": "¿Quién es el impostor?",
     "slug": "quien-es-el-impostor",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icono.png",
     "splash": {
@@ -17,7 +17,7 @@
     },
     "android": {
       "package": "com.samukxx.impostor",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icono-adaptivo.png",
         "backgroundColor": "#000000"
