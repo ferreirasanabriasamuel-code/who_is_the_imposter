@@ -33,6 +33,7 @@ export const OSCURO = {
   iconoSeccion: "#ffd500",
   logoPieBg: "#ffd500",
   logoPieTinta: "#0a0a08",
+     textoBtnGris: "#f6f2e3",
   // Ternas de categorías (claro/oscuro vía tokens)
   cats: {
     comida: { c: "#ffb020", bg: "rgba(255,176,32,.12)", bd: "rgba(255,176,32,.45)" },
@@ -68,6 +69,7 @@ export const CLARO = {
   btnGrisBorde: "#948e80",
   iconoSeccion: "#191712",
   logoPieBg: "#131311",
+     textoBtnGris: "#ffffff",
   logoPieTinta: "#ffd500",
   // Categorías: versiones más oscuras para contrastar sobre papel
   cats: {
