@@ -25,6 +25,14 @@ export const OSCURO = {
   ok: "#4ade80",
   err: "#ff6b6b",
   warn: "#ffd500",
+  // Botones e iconos de sección (en oscuro, primario = amarillo de marca)
+  btnPrimario: "#ffd500",
+  textoBtnPrimario: "#0a0a08",
+  btnGris: "#0c0c0b",
+  btnGrisBorde: "#2e2d22",
+  iconoSeccion: "#ffd500",
+  logoPieBg: "#ffd500",
+  logoPieTinta: "#0a0a08",
   // Ternas de categorías (claro/oscuro vía tokens)
   cats: {
     comida: { c: "#ffb020", bg: "rgba(255,176,32,.12)", bd: "rgba(255,176,32,.45)" },
@@ -38,21 +46,29 @@ export const OSCURO = {
   },
 };
 
-/* ---------- Tokens del modo claro ---------- */
+/* ---------- Tokens del modo claro (amarillo: fondo vivo, tarjetas crema,
+   botón primario negro y secundario gris, como la referencia) ---------- */
 export const CLARO = {
-  bg: "#f6f4ec",
-  card: "#fffdf5",
-  card2: "#efece0",
+  bg: "#ffd500",
+  card: "#fbf4ce",
+  card2: "#fdf6d4",
   ink: "#191712",
   mut: "#6f6a5b",
-  line: "#e3dfd0",
-  line2: "#cfcaba",
+  line: "#efe3b4",
+  line2: "#dfcf9a",
   brand: "#ffd500",
   tinta: "#191712",
   rojo: "#d3271a",
   ok: "#1a9e56",
   err: "#d92c3c",
   warn: "#b98d00",
+  btnPrimario: "#131311",
+  textoBtnPrimario: "#ffffff",
+  btnGris: "#a8a294",
+  btnGrisBorde: "#948e80",
+  iconoSeccion: "#191712",
+  logoPieBg: "#131311",
+  logoPieTinta: "#ffd500",
   // Categorías: versiones más oscuras para contrastar sobre papel
   cats: {
     comida: { c: "#a86500", bg: "rgba(168,101,0,.10)", bd: "rgba(168,101,0,.40)" },

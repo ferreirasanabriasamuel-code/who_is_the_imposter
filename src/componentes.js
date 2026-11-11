@@ -33,8 +33,8 @@ export function TxtBtn({ grande = false, color, children }) {
   );
 }
 
-/* ---------- Botón (.btn / .btn.primary / .btn.big) ---------- */
-export function Btn({ primaria = false, grande = false, onPress, disabled = false, style, children }) {
+/* ---------- Botón (.btn / .btn.primary / .btn.big / variante gris) ---------- */
+export function Btn({ primaria = false, grande = false, gris = false, onPress, disabled = false, style, children }) {
   const { colores } = useTema();
   return (
     <TouchableOpacity
@@ -47,9 +47,11 @@ export function Btn({ primaria = false, grande = false, onPress, disabled = fals
       style={[
         styles.btn,
         grande && styles.btnGrande,
-        primaria
-          ? { backgroundColor: colores.brand, borderColor: "transparent", shadowColor: colores.brand }
-          : { backgroundColor: colores.card, borderColor: colores.line2 },
+        gris
+          ? { backgroundColor: colores.btnGris, borderColor: colores.btnGrisBorde }
+          : primaria
+            ? { backgroundColor: colores.btnPrimario, borderColor: "transparent", shadowColor: colores.btnPrimario }
+            : { backgroundColor: colores.card, borderColor: colores.line2 },
         disabled && { opacity: 0.5 },
         style,
       ]}
@@ -221,8 +223,8 @@ export function Pie() {
   const { colores } = useTema();
   return (
     <View style={styles.pie}>
-      <View style={[styles.logoMini, { backgroundColor: colores.brand }]}>
-        <IconoLupa tam={14} color={colores.tinta} />
+      <View style={[styles.logoMini, { backgroundColor: colores.logoPieBg }]}>
+        <IconoLupa tam={14} color={colores.logoPieTinta} />
       </View>
       <Text style={[styles.pieTexto, { color: colores.mut, fontFamily: F.displayFuerte }]}>
         ¿Quién es el impostor?
