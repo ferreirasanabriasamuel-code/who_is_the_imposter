@@ -1,5 +1,3 @@
-necesito que conviertas ésta página web (archivo .zip adjunta) a un compilable en GitHub, así yo a partir de:
-.github/workflows/apk.yml
 name: Build APK
 
 on:
