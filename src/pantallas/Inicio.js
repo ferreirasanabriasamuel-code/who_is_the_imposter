@@ -103,7 +103,7 @@ export default function Inicio({ onEmpezar }) {
               <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
             </Btn>
             <Btn grande gris onPress={() => setVerReglas(true)}>
-              <TxtBtn grande color={colores.ink}>Cómo se juega</TxtBtn>
+                       <TxtBtn grande color={colores.textoBtnGris}>Cómo se juega</TxtBtn>
             </Btn>
           </Animar>
         </View>
