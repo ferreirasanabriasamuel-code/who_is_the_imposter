@@ -100,9 +100,9 @@ export default function Inicio({ onEmpezar }) {
           </Animar>
           <Animar delay={300} style={styles.ctas}>
             <Btn primaria grande onPress={() => scrollRef.current?.scrollTo({ y: yJugadores.current, animated: true })}>
-              <TxtBtn grande color={colores.tinta}>Empezar partida</TxtBtn>
+              <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
             </Btn>
-            <Btn grande onPress={() => setVerReglas(true)}>
+            <Btn grande gris onPress={() => setVerReglas(true)}>
               <TxtBtn grande color={colores.ink}>Cómo se juega</TxtBtn>
             </Btn>
           </Animar>
@@ -112,7 +112,7 @@ export default function Inicio({ onEmpezar }) {
         <Animar delay={80}>
           <View onLayout={alScrollJugadores} style={{ marginTop: 14 }}>
             <Tarjeta>
-              <TituloSeccion icono={<IconoUsers tam={18} color={colores.brand} />}>
+              <TituloSeccion icono={<IconoUsers tam={18} color={colores.iconoSeccion} />}>
                 {"Jugadores (" + nombresLlenos + ")"}
               </TituloSeccion>
               {ajustes.jugadores.map((nombre, i) => (
@@ -156,7 +156,7 @@ export default function Inicio({ onEmpezar }) {
         {/* AJUSTES · IMPOSTORES */}
         <Animar delay={160}>
           <Tarjeta>
-            <TituloSeccion icono={<IconoOjo tam={18} color={colores.brand} />}>
+            <TituloSeccion icono={<IconoOjo tam={18} color={colores.iconoSeccion} />}>
               {"Número de impostores: " + numImp}
             </TituloSeccion>
             <View style={styles.nube}>
@@ -178,7 +178,7 @@ export default function Inicio({ onEmpezar }) {
         {/* AJUSTES · CATEGORÍAS */}
         <Animar delay={200}>
           <Tarjeta>
-            <TituloSeccion icono={<IconoLlave tam={18} color={colores.brand} />}>
+            <TituloSeccion icono={<IconoLlave tam={18} color={colores.iconoSeccion} />}>
               Categorías
             </TituloSeccion>
             <View style={styles.nube}>
@@ -204,7 +204,7 @@ export default function Inicio({ onEmpezar }) {
         {/* AJUSTES · EXTRAS */}
         <Animar delay={200}>
           <Tarjeta>
-            <TituloSeccion icono={<IconoLuna tam={18} color={colores.brand} />}>
+            <TituloSeccion icono={<IconoLuna tam={18} color={colores.iconoSeccion} />}>
               Extras
             </TituloSeccion>
             <View style={styles.nube}>
@@ -224,7 +224,7 @@ export default function Inicio({ onEmpezar }) {
         {/* EMPEZAR */}
         <Animar delay={240} style={styles.ctasCentradas}>
           <Btn primaria grande onPress={empezar}>
-            <TxtBtn grande color={colores.tinta}>Empezar partida</TxtBtn>
+            <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
           </Btn>
         </Animar>
 

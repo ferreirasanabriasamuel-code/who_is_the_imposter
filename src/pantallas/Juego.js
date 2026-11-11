@@ -137,7 +137,7 @@ function Cronometro() {
 
   return (
     <Tarjeta style={styles.panelTimer}>
-      <TituloSeccion icono={<IconoTimer tam={18} color={colores.brand} />}>
+      <TituloSeccion icono={<IconoTimer tam={18} color={colores.iconoSeccion} />}>
         Cronómetro de debate
       </TituloSeccion>
       <View style={styles.presets}>
@@ -221,7 +221,7 @@ export default function Juego({ partida, onNuevoJuego }) {
           {/* DEBATE */}
           <Animar>
             <Tarjeta>
-              <TituloSeccion icono={<IconoDebate tam={18} color={colores.brand} />}>
+              <TituloSeccion icono={<IconoDebate tam={18} color={colores.iconoSeccion} />}>
                 Debate
               </TituloSeccion>
               <Text style={[styles.arranque, { color: colores.ink }]}>
@@ -239,7 +239,7 @@ export default function Juego({ partida, onNuevoJuego }) {
           <Animar delay={120} style={styles.ctasCentradas}>
             {!revelado && (
               <Btn primaria grande onPress={setRevelado}>
-                <TxtBtn grande color={colores.tinta}>Revelar impostor y palabra</TxtBtn>
+                <TxtBtn grande color={colores.textoBtnPrimario}>Revelar impostor y palabra</TxtBtn>
               </Btn>
             )}
           </Animar>

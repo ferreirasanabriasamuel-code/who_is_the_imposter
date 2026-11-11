@@ -125,10 +125,10 @@ export default function Reparto({ partida, onSiguiente, onTerminar }) {
 
           <View style={styles.ctasCentradas}>
             <Btn primaria grande onPress={siguiente}>
-              <TxtBtn grande color={colores.tinta}>
+              <TxtBtn grande color={colores.textoBtnPrimario}>
                 {esUltimo ? "Terminar reparto " : "Siguiente jugador"}
               </TxtBtn>
-              {esUltimo && <IconoFlecha tam={16} color={colores.tinta} />}
+              {esUltimo && <IconoFlecha tam={16} color={colores.textoBtnPrimario} />}
             </Btn>
           </View>
         </View>
