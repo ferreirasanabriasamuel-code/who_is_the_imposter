@@ -1,0 +1,26 @@
+# Dependencias
+node_modules/
+
+# Generados por Expo (CI los crea con `npx expo prebuild`)
+.expo/
+dist/
+/android/
+/ios/
+
+# Native build outputs
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Sistema / logs
+.DS_Store
+*.log
+npm-debug.*
+.yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

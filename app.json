@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "¿Quién es el impostor?",
+    "slug": "quien-es-el-impostor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icono.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.samukxx.impostor"
+    },
+    "android": {
+      "package": "com.samukxx.impostor",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icono-adaptivo.png",
+        "backgroundColor": "#000000"
+      }
+    }
+  }
+}
