@@ -38,7 +38,7 @@ export default function Inicio({ onEmpezar }) {
   const { colores } = useTema();
   const insets = { top: StatusBar.currentHeight || 0, bottom: 0 };
   const scrollRef = useRef(null);
-  const yJugadores = useRef(0);
+  const yEmpezar = useRef(0);
 
   const [ajustes, setAjustes] = useState(ajustesPorDefecto());
   const [verReglas, setVerReglas] = useState(false);
@@ -58,8 +58,8 @@ export default function Inicio({ onEmpezar }) {
   const maxImp = useMemo(() => Math.max(1, Math.floor((nombresLlenos - 1) / 2)), [nombresLlenos]);
   const numImp = Math.min(ajustes.numImpostores, maxImp);
 
-  const alScrollJugadores = useCallback((e) => {
-    yJugadores.current = e.nativeEvent.layout.y;
+  const alScrollEmpezar = useCallback((e) => {
+    yEmpezar.current = e.nativeEvent.layout.y;
   }, []);
 
   const empezar = async () => {
@@ -99,7 +99,7 @@ export default function Inicio({ onEmpezar }) {
             </Text>
           </Animar>
           <Animar delay={300} style={styles.ctas}>
-            <Btn primaria grande onPress={() => scrollRef.current?.scrollTo({ y: yJugadores.current, animated: true })}>
+            <Btn primaria grande onPress={() => scrollRef.current?.scrollTo({ y: yEmpezar.current, animated: true })}>
               <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
             </Btn>
             <Btn grande gris onPress={() => setVerReglas(true)}>
@@ -110,7 +110,7 @@ export default function Inicio({ onEmpezar }) {
 
         {/* AJUSTES · JUGADORES */}
         <Animar delay={80}>
-          <View onLayout={alScrollJugadores} style={{ marginTop: 14 }}>
+          <View style={{ marginTop: 14 }}>
             <Tarjeta>
               <TituloSeccion icono={<IconoUsers tam={18} color={colores.iconoSeccion} />}>
                 {"Jugadores (" + nombresLlenos + ")"}
@@ -222,11 +222,13 @@ export default function Inicio({ onEmpezar }) {
         </Animar>
 
         {/* EMPEZAR */}
-        <Animar delay={240} style={styles.ctasCentradas}>
-          <Btn primaria grande onPress={empezar}>
-            <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
-          </Btn>
-        </Animar>
+        <View onLayout={alScrollEmpezar}>
+          <Animar delay={240} style={styles.ctasCentradas}>
+            <Btn primaria grande onPress={empezar}>
+              <TxtBtn grande color={colores.textoBtnPrimario}>Empezar partida</TxtBtn>
+            </Btn>
+          </Animar>
+        </View>
 
         <Pie />
       </ScrollView>
