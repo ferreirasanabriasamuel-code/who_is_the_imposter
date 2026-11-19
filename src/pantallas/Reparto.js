@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   escenario: { maxWidth: 560, width: "100%", alignSelf: "center", alignItems: "center" },
   progreso: { fontSize: 14, marginBottom: 14 },
   zonaCarta: { maxWidth: 360, width: "88%", marginBottom: 20 },
-  carta: { width: "100%", aspectRatio: 5 / 6 },
+  carta: { width: "100%", aspectRatio: 5 / 6, borderRadius: 32 },
   cara: {
     position: "absolute",
     top: 0,
